@@ -1,0 +1,62 @@
+.acordeao {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.acordeao__item {
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+  background: var(--superficie);
+  overflow: hidden;
+}
+
+.acordeao__cabecalho {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.acordeao__botao {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+  color: var(--texto);
+  text-align: left;
+}
+
+.acordeao__botao:hover {
+  background: var(--superficie-2);
+}
+
+.acordeao__seta {
+  font-size: 1.3rem;
+  line-height: 1;
+  color: var(--destaque);
+}
+
+.acordeao__painel {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.acordeao__painel--aberto {
+  max-height: 20rem;
+  opacity: 1;
+}
+
+.acordeao__painel p {
+  margin: 0;
+  padding: 0 1rem 1rem;
+  color: var(--texto-suave);
+  line-height: 1.6;
+}

@@ -1,0 +1,37 @@
+.barra {
+  width: 100%;
+}
+
+.barra__topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 0.4rem;
+  font-size: 0.85rem;
+}
+
+.barra__rotulo {
+  color: var(--texto-suave);
+}
+
+.barra__percentual {
+  font-weight: 700;
+  color: var(--destaque);
+}
+
+.barra__trilho {
+  width: 100%;
+  height: 0.75rem;
+  background: var(--superficie-2);
+  border: 1px solid var(--borda);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.barra__preenchimento {
+  height: 100%;
+  background: linear-gradient(90deg, var(--destaque), var(--destaque-2));
+  border-radius: 999px;
+  transition: width 0.4s ease;
+}

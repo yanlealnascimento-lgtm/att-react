@@ -1,0 +1,80 @@
+.menu {
+  position: relative;
+  display: inline-block;
+}
+
+.menu__gatilho {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 0.9rem;
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  background: var(--superficie);
+  color: var(--texto);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.menu__gatilho:hover {
+  border-color: var(--destaque);
+}
+
+.menu__rotulo {
+  color: var(--texto-suave);
+  font-weight: 400;
+}
+
+.menu__seta {
+  color: var(--destaque);
+}
+
+.menu__lista {
+  position: absolute;
+  top: calc(100% + 0.35rem);
+  right: 0;
+  z-index: 20;
+  min-width: 100%;
+  width: max-content;
+  max-width: 15rem;
+  list-style: none;
+  margin: 0;
+  padding: 0.3rem;
+  background: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+}
+
+.menu__opcao {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.55rem 0.7rem;
+  border: none;
+  border-radius: 6px;
+  background: none;
+  color: var(--texto);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.menu__imagem {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.menu__opcao:hover {
+  background: var(--superficie-2);
+}
+
+.menu__opcao--ativa {
+  color: var(--destaque);
+  font-weight: 700;
+}

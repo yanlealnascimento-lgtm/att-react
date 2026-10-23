@@ -1,0 +1,238 @@
+.app {
+  width: min(100%, 60rem);
+  margin: 0 auto;
+  padding: clamp(1rem, 4vw, 2rem);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app__conteudo {
+  flex: 1;
+}
+
+.cabecalho {
+  margin-bottom: 1.5rem;
+}
+
+.cabecalho__topo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.cabecalho__titulo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+  font-size: clamp(1.4rem, 5vw, 2rem);
+  line-height: 1.2;
+}
+
+.cabecalho__foto {
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.cabecalho__cargo {
+  margin: 0.25rem 0 0;
+  color: var(--destaque);
+  font-weight: 600;
+}
+
+.campanha {
+  text-align: center;
+}
+
+.campanha__contador {
+  margin: 0;
+  font-size: clamp(1.8rem, 7vw, 2.6rem);
+  line-height: 1.1;
+}
+
+.campanha__contador strong {
+  color: var(--destaque);
+}
+
+.campanha__taxa {
+  margin: 0.35rem 0 1.5rem;
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+}
+
+.campanha__botao {
+  width: clamp(9rem, 40vw, 13rem);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 3px solid var(--borda);
+  background: radial-gradient(circle at 30% 25%, var(--superficie-2), var(--superficie));
+  padding: 0;
+  overflow: hidden;
+  font-size: clamp(4rem, 18vw, 6rem);
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 0.08s ease, border-color 0.2s ease;
+  user-select: none;
+}
+
+.campanha__botao img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  pointer-events: none;
+}
+
+.campanha__botao:hover {
+  border-color: var(--destaque);
+}
+
+.campanha__botao:active {
+  transform: scale(0.94);
+}
+
+.campanha__dica {
+  margin: 0.9rem 0 1.75rem;
+  color: var(--texto-suave);
+  font-size: 0.85rem;
+}
+
+.campanha__stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: 0.75rem;
+  margin: 0;
+  text-align: left;
+}
+
+.campanha__stats > div {
+  padding: 0.85rem;
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+  background: var(--superficie);
+}
+
+.campanha__stats dt {
+  font-size: 0.78rem;
+  color: var(--texto-suave);
+}
+
+.campanha__stats dd {
+  margin: 0.2rem 0 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--destaque);
+}
+
+.comite__saldo {
+  margin: 0 0 1rem;
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+}
+
+.comite__saldo strong {
+  color: var(--destaque);
+}
+
+.comite__lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.comite__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+  background: var(--superficie);
+}
+
+.comite__item--ok {
+  border-color: #4ade8055;
+  background: #4ade8010;
+}
+
+.comite__info {
+  flex: 1 1 14rem;
+  min-width: 0;
+}
+
+.comite__nome {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.comite__descricao {
+  margin: 0.2rem 0 0;
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+}
+
+.comite__efeito {
+  margin: 0.3rem 0 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--destaque);
+}
+
+.comite__comprar {
+  flex-shrink: 0;
+  padding: 0.6rem 1rem;
+  border: 1px solid var(--destaque);
+  border-radius: 8px;
+  background: var(--destaque);
+  color: #041a1f;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.comite__comprar:hover:not(:disabled) {
+  background: var(--destaque-2);
+  border-color: var(--destaque-2);
+}
+
+.comite__comprar:disabled {
+  background: transparent;
+  border-color: #4ade80;
+  color: #4ade80;
+  cursor: default;
+}
+
+.comite__aviso {
+  width: 100%;
+  font-size: 0.75rem;
+  color: #f87171;
+}
+
+@media (max-width: 520px) {
+  .cabecalho__topo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .comite__item {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .comite__comprar {
+    width: 100%;
+  }
+}
